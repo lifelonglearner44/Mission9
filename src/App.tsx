@@ -81,10 +81,11 @@ function TeamList({ teams }: TeamListProps) {
 
 // The App component that renders the Header and TeamList components.
 function App() {
-  const [teams, setTeams] = useState<Team[]>(teamsData.teams); // Specify the type as an array of Team objects
-
+  //  Specify the type as an array of Team objects
+  const [teams, setTeams] = useState<Team[]>(teamsData.teams);
+  //  Set the state with the imported JSON data
   useEffect(() => {
-    setTeams(teamsData.teams); // Set the state with the imported JSON data
+    setTeams(teamsData.teams);
   }, []);
 
   return (
